@@ -1,0 +1,70 @@
+/* Conway's Game of Life (v0.7) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(87, 165, 149);
+  font-family: Arial, sans-serif;
+  color: #efefef;
+}
+
+.header {
+  text-align: center;
+  flex: 0 1 auto; 
+  padding: 10px;
+}
+
+h1, p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 20px);
+  grid-auto-rows: 20px;
+  justify-content: center;
+  flex-grow: 1; 
+  overflow: hidden; 
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.329);
+}
+
+.cell.active {
+  background-color: black;
+}
+
+.controls {
+  display: flex;
+  justify-content: left; 
+  gap: 10px;
+  padding: 10px;
+  flex: 0 1 auto; 
+}
+
+button, input {
+  background-color: #efefef; 
+  border: 1px solid #efefef; 
+  border-radius: 0.2rem;
+}
+
+button {
+  padding: 10px;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+}
